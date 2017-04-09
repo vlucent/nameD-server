@@ -32,7 +32,7 @@ $(function() {
 
     /* Initialization */
     // Get list of names in database for field autocomplete
-    var names_url = 'https://'+ip+":"+port+"/"+names;
+    var names_url = 'https://'+ip+"/"+names;
 
     $.ajax({
        url: names_url,
@@ -83,7 +83,7 @@ function search_for_surname(surname) {
     // Data to send
     var req = $surnameInput.val();
 
-    var stats_url = 'https://'+ip+":"+port+"/"+stats;
+    var stats_url = 'https://'+ip+"/"+stats;
     $.post( stats_url, req, function(data) {
 
         $("#result-container").fadeIn();
