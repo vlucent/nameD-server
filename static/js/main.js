@@ -14,7 +14,7 @@ var mapping = [
     "Two or More Races",
     "Hispanic or Latino"
 ];
-var ip = '127.0.0.1';
+var ip = '0.0.0.0';
 var port = 8000;
 var stats = 'get_stats';
 var names = 'get_names';
