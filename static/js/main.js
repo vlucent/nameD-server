@@ -15,7 +15,7 @@ var mapping = [
     "Hispanic or Latino"
 ];
 var ip = '127.0.0.1';
-var port = 5000;
+var port = 8000;
 var stats = 'get_stats';
 var names = 'get_names';
 var asianMapping = {
