@@ -15,7 +15,7 @@ var mapping = [
     "Hispanic or Latino"
 ];
 //var ip = '127.0.0.1';
-var ip = 'https://tranquil-bayou-42620.herokuapp.com';
+var ip = 'tranquil-bayou-42620.herokuapp.com';
 var port = 5000;
 var stats = 'get_stats';
 var names = 'get_names';
