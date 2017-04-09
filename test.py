@@ -1,4 +1,5 @@
 import sqlalchemy
+import os
 import pandas as pd
 import json
 import flask
@@ -73,8 +74,9 @@ def get_stats():
 if __name__ == "__main__":
     # BUILD DATABASE
     engine = create_engine('sqlite:///tutorial.db')
-
-    app.run()
+    port = int(os.environ.get("PORT", 8000))
+    app.run(host='0.0.0.0', port=port)
+    # app.run()
 
 
 
