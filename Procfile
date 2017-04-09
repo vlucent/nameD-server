@@ -1,1 +1,1 @@
-web: gunicorn nameD-server.wsgi --log-file -
+web: python test.py --log-file -
