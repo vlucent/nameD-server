@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>nameQQ</title>
+
+    <!--Bootstrap Style-->
+    <link rel="stylesheet" href="style/bootstrap.min.css">
+    <link href="style/bootstrap.min.css.map">
+    <link href="fonts/glyphicons-halflings-regular.ttf">
+
+    <!--Fontawesome Style-->
+    <link rel="stylesheet" href="fonts/font-awesome.min.css">
+    <link href="fonts/fontawesome-webfont.ttf">
+    <link href="fonts/fontawesome-webfont.woff">
+    <link href="fonts/fontawesome-webfont.woff2">
+
+    <!--C3 Style-->
+    <link rel="stylesheet" href="style/c3.min.css">
+
+    <!--Custom Style-->
+    <link rel="stylesheet" href="style/main.css">
+
+    <!--jQuery-->
+    <script src="js/jquery-3.2.0.min.js"></script>
+
+    <!--Bootstrap-->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!--Bootstrap Typeahead-->
+    <script src="js/bootstrap3-typeahead.min.js"></script>
+
+    <!--C3-->
+    <script src="js/d3.v3.js"></script>
+    <script src="js/c3.min.js"></script>
+
+</head>
+<body>
+
+<div class="jumbotron" id="banner">
+    <!--<div id="banner-bg"></div>-->
+    <div class="container text-center">
+        <div class="row" style="padding-top:30vh;">
+            <h1>nameQQ</h1>
+            <p>tagline here.</p>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="input-group input-group-lg">
+                    <input type="text" disabled class="form-control" id="surname-input" placeholder="surname" data-provide="typeahead">
+                    <span class="input-group-btn">
+                        <button class="btn btn-default disabled" id="surname-search-btn" type="button"><span class="glyphicon glyphicon-search"></span></button>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="container text-center" id="result-container">
+    <div class="row" id="chart-container" style="display:none;padding-bottom:3vh;">
+        <div class="col-lg-12">
+            <h2>Demographic Stats for Surname <span id="surname-label"></span></h2>
+            <div id="chart"></div>
+            <div><strong>Total:</strong> <span id="total"></span> individuals</div>
+        </div>
+    </div>
+    <div class="row" id="no-data" style="display:none;padding-bottom:30%;">
+        <div class="col-lg-12">
+            <h2>Sorry, no data found for surname  <span id="surname-no-data"></span></h2>
+        </div>
+    </div>
+    <div class="row" id="again" style="display:none;">
+        <div class="col-ls-12">
+            <button class="btn btn-default" id="search-again-btn" type="button">Search Again</button>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade" id="error-modal" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Oops!</h2>
+            </div>
+            <div class="modal-body">
+                <p id="modal-text"></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Okay</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="js/main.js"></script>
+
+</body>
+</html>

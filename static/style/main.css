@@ -1,0 +1,42 @@
+#banner {
+    height: 100vh;
+	margin-bottom: 0;
+	background: url("../images/blob-mod.png");
+	background-size: cover;
+}
+
+#search {
+    z-index: 10;
+}
+
+.typeahead.dropdown-menu {
+    width: 100%;
+}
+
+#loading-spinner-container {
+    height: 10vh;
+}
+
+#results {
+	height: 90vh;
+}
+
+#again {
+    height: 10vh;
+}
+
+#surname-label, #surname-no-data {
+    text-transform:capitalize;
+}
+
+#chart {
+    height: 80vh;
+}
+
+#result-container {
+    height: 100vh;
+}
+
+body{
+    overflow-y: scroll;
+}

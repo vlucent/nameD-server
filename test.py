@@ -7,10 +7,12 @@ from sqlalchemy import *
 from flask import *
 from flask_cors import CORS, cross_origin
 
-app = Flask(__name__)
+app = Flask(__name__, static_url_path='')
 CORS(app)
 
-
+@app.route('/')
+def send_js():
+    return send_from_directory('static', 'index.html')
 
 @app.route("/get_names", methods=['GET'])
 def get_names():
