@@ -10,6 +10,16 @@ from flask_cors import CORS, cross_origin
 app = Flask(__name__)
 CORS(app)
 
+
+
+@app.route("/get_names", methods=['GET'])
+def get_names():
+    namesQuery = "select name from Census_2010 limit 50;"
+    namesResult = pd.read_sql_query(namesQuery, con=engine)
+    namesArray = namesResult['name'].values
+    namesJson = {'names':namesArray.tolist()}
+    return jsonify(namesJson)
+
 @app.route("/get_stats", methods=['GET', 'POST'])
 def get_stats():
     print "hi"
